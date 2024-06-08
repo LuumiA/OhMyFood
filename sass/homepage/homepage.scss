@@ -1,0 +1,375 @@
+body {
+  margin: 0;
+  width: 100%;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 89px;
+
+  @include desktop {
+    display: flex;
+    height: 96px;
+    padding: 30px 0px 31.798px 0px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__width-image {
+    width: 162px;
+    height: 44px;
+    @include desktop {
+      width: 200px;
+      height: 34.202px;
+    }
+    &__police {
+      font-family: "roboto", sans-serif;
+      font-weight: 700;
+    }
+  }
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  background: var(--Grey-2, #eaeaea);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.exploration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 287px;
+  background-color: #f6f6f6;
+  &__main-title h1 {
+    height: 68px;
+    text-align: center;
+    font-family: "roboto", sans-serif;
+    font-weight: 700;
+    margin: 38px 58px 0 42px;
+    @include desktop {
+      color: #000;
+      text-align: center;
+      font-family: "Roboto";
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+  &__info {
+    flex-wrap: wrap;
+    height: 46px;
+    margin-left: 34px;
+    margin-right: 26px;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+  }
+  &__explorer {
+    width: 218px;
+    height: 50px;
+    margin-top: 38px;
+    border-radius: 25px;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    padding: 13px 18.75px;
+    border: none;
+    color: white;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(#ff79da, #9356dc);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.fonctionnement {
+  width: 100%;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  @include desktop {
+    width: 96%;
+    height: 228px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 50px;
+    padding-left: 90px;
+  }
+
+  &__title-fonctionnement {
+    margin-left: 20px;
+    margin-top: 48px;
+    margin-right: 80px;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  &__card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: center;
+      width: 90%;
+    }
+  }
+  &__card {
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    align-items: center;
+    display: flex;
+    margin-left: 0;
+    width: 80%;
+    height: 72.3px;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    margin: 26px 20px 24.92px 32.51px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    justify-content: space-evenly;
+    @include desktop {
+      width: 32%;
+      height: 72px;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  &__circle-icon {
+    width: 26px; /* Taille du cercle */
+    height: 26px; /* Taille du cercle */
+    background-color: #9356dc; /*Couleur de fond du cercle */
+    color: white; /* Couleur du texte */
+    border-radius: 50%; /* Rendre le div en cercle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -42px;
+  }
+}
+
+.fa-circle {
+  color: #9356dc;
+  font-size: 24px;
+}
+
+.fa-mobile-screen {
+  color: #7e7e7e;
+  font-size: 19px;
+}
+
+.fa-list {
+  color: #7e7e7e;
+  font-size: 19px;
+}
+
+.fa-store {
+  color: #9356dc;
+  font-size: 19px;
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 20px 0 66px 0;
+  background-color: $LightGray;
+  @include desktop {
+    display: flex;
+    padding: 0px 180px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    align-self: stretch;
+  }
+
+  &__title {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  &__bloc {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+.restaurant__cards {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 251px;
+  margin: auto;
+  margin-bottom: 18px;
+  border-radius: 15px;
+  background-color: white;
+
+  &:hover {
+    @include object-shadow(darken($shadow, 10%));
+  }
+
+  &--img {
+    position: relative;
+    overflow: hidden;
+    height: 175px;
+    border-radius: 15px 15px 0px 0px;
+
+    & img {
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+    }
+
+    &--cardinfo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 15px;
+      top: 12px;
+      width: 80px;
+      height: 30px;
+      border-radius: 2px;
+      background-color: $color-tertiary;
+      color: darken($color-tertiary, 40%);
+    }
+  }
+
+  &--info {
+    display: flex;
+    align-items: flex-start;
+    height: auto;
+    min-height: 75px;
+    padding: 15px;
+
+    &--text {
+      width: 90%;
+    }
+
+    & h4,
+    p {
+      margin: 0;
+    }
+
+    & h4 {
+      width: 267px;
+      height: 20px;
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+
+    & p {
+      height: 24px;
+      font-weight: 300;
+      font-size: 17px;
+    }
+  }
+
+  &--like {
+    position: absolute;
+    top: 76%;
+    right: 7%;
+    font-size: 25px;
+  }
+}
+
+.button__like {
+  width: 28px;
+  z-index: 0;
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-size: 25px;
+  padding: 0;
+  border: transparent 0px solid;
+  background-color: transparent;
+  -webkit-text-stroke: 1px white;
+  cursor: pointer;
+
+  &:hover {
+    &::after {
+      z-index: 1;
+      animation: heart-fill 900ms forwards cubic-bezier(0.65, 1.01, 0.98, 1.06);
+    }
+  }
+
+  &::after {
+    z-index: -1;
+    animation: heart-fill 900ms forwards cubic-bezier(1.06, 0.98, 1.01, 0.65);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 25px;
+    content: "\f004";
+    color: transparent;
+    @include gradient(45deg);
+    background-clip: text;
+    transform-origin: bottom;
+    -webkit-text-stroke: 1px;
+  }
+}
+
+a {
+  text-decoration: unset;
+  color: inherit;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  height: 186px;
+
+  padding: 22px 25px 22px 25px;
+  &__text1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 16px;
+    gap: 11px;
+  }
+  &__text1--color {
+    color: #ffffff;
+  }
+  &__text--police-color {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 0;
+  }
+  &__text2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10.08px;
+  }
+}
+
+#icon-color-size {
+  filter: brightness(0) invert(1);
+  width: 137.582px;
+  height: 27px;
+}
+
+.white {
+  color: #ffffff;
+}

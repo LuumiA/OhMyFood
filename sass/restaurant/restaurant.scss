@@ -1,0 +1,247 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  height: 63px;
+  padding: 14px 24px 0 17px;
+  gap: 42px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+.icons {
+  display: flex;
+  &__details {
+    color: #353535;
+    font-size: 30px;
+  }
+}
+
+.title {
+  display: flex;
+  &__img--size {
+    width: 80%;
+  }
+}
+
+.image img {
+  object-fit: cover;
+  height: 250px;
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #f0f0f0;
+  border-radius: 25px 25px 0px 0px;
+  padding: 2% 5% 5% 5%;
+  z-index: 0;
+  margin-top: -30px;
+  height: 1159px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+
+  &__police {
+    font-size: 27px;
+    font-family: "Shrikhand";
+  }
+  &__button {
+    width: 28px;
+    z-index: 0;
+    position: relative;
+    font-family: "Font Awesome 5 Free";
+    font-size: 25px;
+    padding: 0;
+    border: transparent 0px solid;
+    background-color: transparent;
+    -webkit-text-stroke: 1px white;
+    cursor: pointer;
+  }
+}
+
+.entrees {
+  display: flex;
+  &__h3 {
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
+
+.entrees-card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 0;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px 0 #d5d5d5;
+  overflow: hidden;
+  cursor: pointer;
+  height: 69px;
+  &__info {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2%;
+    gap: 2%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding: 5px;
+  }
+  &__description--h3 {
+    margin: 3px;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  &__description--p {
+    margin: 0;
+    font-family: "Roboto";
+    font-size: 14.043px;
+    font-style: normal;
+    font-weight: 300;
+  }
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    width: 15%;
+    padding: 5px;
+    font-family: "Roboto";
+    font-size: 15.043px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  &__price--p {
+    margin-bottom: 0;
+  }
+  &__checkout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 20%;
+    margin-right: -20%;
+    border-radius: 0px 15px 15px 0px;
+    background-color: $color-tertiary;
+    transition: margin-right 800ms cubic-bezier(0.63, 1.23, 0.96, 0.92);
+
+    &::after {
+      display: inline-block;
+      margin: auto;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 25px;
+      content: "\f058";
+      color: $white;
+      transition: transform 800ms cubic-bezier(0.63, 1.23, 0.96, 0.92);
+    }
+  }
+}
+
+.plats {
+  display: flex;
+  &__h3 {
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
+
+.desserts {
+  display: flex;
+  &__h3 {
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
+
+.commander {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__button {
+    width: 218px;
+    height: 50px;
+    margin-top: 38px;
+    border-radius: 25px;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    padding: 13px 18.75px;
+    border: none;
+    color: white;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(#ff79da, #9356dc);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  height: 186px;
+
+  padding: 22px 25px 22px 25px;
+  &__text1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 16px;
+    gap: 11px;
+  }
+  &__text1--color {
+    color: #ffffff;
+  }
+  &__text--police-color {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 0;
+  }
+  &__text2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10.08px;
+  }
+}
+
+#icon-color-size {
+  filter: brightness(0) invert(1);
+  width: 137.582px;
+  height: 27px;
+}
+
+.white {
+  color: #ffffff;
+}

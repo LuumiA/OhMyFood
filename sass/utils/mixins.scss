@@ -1,0 +1,13 @@
+@mixin gradient($oriantation: $degree) {
+  background: linear-gradient($degree, $color-primary, $color-secondary);
+}
+
+@mixin object-shadow($color: $shadow) {
+  box-shadow: 0 4px 10px 0 $color;
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
