@@ -393,7 +393,7 @@ a {
 #icon-color-size {
   filter: brightness(0) invert(1);
   width: 137.582px;
-  height: 27px;
+  height: 27px; /* Ceci est un commentaire */
 }
 
 .white {
