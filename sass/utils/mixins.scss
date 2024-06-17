@@ -11,3 +11,8 @@
     @content;
   }
 }
+
+/**** cercle ****/
+@mixin circle {
+  border-radius: 50%;
+}

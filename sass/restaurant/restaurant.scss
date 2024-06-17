@@ -90,6 +90,14 @@
   overflow: hidden;
   cursor: pointer;
   height: 69px;
+
+  &:hover > &__checkout {
+    margin-right: 0px;
+
+    &::after {
+      transform: rotate(360deg);
+    }
+  }
   &__info {
     display: flex;
     flex: 1;
