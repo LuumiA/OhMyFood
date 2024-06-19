@@ -83,12 +83,26 @@
 
 .entrees {
   display: flex;
+
   &__h3 {
     font-family: "Roboto";
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
     text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0%;
+      bottom: 0;
+      width: 60%;
+      height: 3px;
+      background-color: $color-tertiary;
+    }
   }
 }
 
@@ -137,6 +151,9 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
+    @include desktop {
+      margin: 0;
+    }
   }
   &__description--p {
     margin: 0;
@@ -190,6 +207,18 @@
     font-style: normal;
     font-weight: 300;
     text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0%;
+      bottom: 0;
+      width: 76%;
+      height: 3px;
+      background-color: $color-tertiary;
+    }
   }
 }
 
@@ -201,6 +230,18 @@
     font-style: normal;
     font-weight: 300;
     text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0%;
+      bottom: 0;
+      width: 50%;
+      height: 3px;
+      background-color: $color-tertiary;
+    }
   }
 }
 
@@ -231,7 +272,6 @@
   flex-direction: column;
   background-color: #353535;
   height: 186px;
-
   padding: 22px 25px 22px 25px;
   &__text1 {
     display: flex;
