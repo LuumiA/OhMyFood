@@ -29,6 +29,9 @@
   height: 250px;
   position: relative;
   width: 100%;
+  @include desktop {
+    height: 450px;
+  }
 }
 
 .container {
@@ -41,16 +44,28 @@
   z-index: 0;
   margin-top: -30px;
   height: 1159px;
+  @include desktop {
+    max-width: 1024px;
+    margin: auto;
+    margin-top: -30px;
+  }
 }
 
 .title {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 48px;
 
   &__police {
     font-size: 27px;
     font-family: "Shrikhand";
+    @include desktop {
+      font-family: "Shrikhand";
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+    }
   }
   &__button {
     width: 28px;
@@ -103,7 +118,7 @@
     flex: 1;
     justify-content: space-between;
     width: 100%;
-    margin: 2%;
+    margin: 1%;
     gap: 2%;
     white-space: nowrap;
     overflow: hidden;

@@ -193,7 +193,7 @@
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 40px;
-  content: "\f578";
+  content: "\f6d7";
   color: #99e2d0;
   transform: translateY(-150px);
   animation: icons-appearing 610ms both;
@@ -209,7 +209,7 @@
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 40px;
-  content: "\f7ec";
+  content: "\f7fb";
   color: #ffffff;
   transform: translateY(-150px);
   animation: icons-appearing 610ms 610ms both;
@@ -230,7 +230,7 @@
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 40px;
-  content: "\f7ef";
+  content: "\e4c6";
   color: #ffffff;
   transform: translateY(-150px);
   animation: icons-appearing 610ms 1220ms both;
@@ -243,7 +243,7 @@
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 40px;
-  content: "\f5d1";
+  content: "\f79f";
   color: #ff79da;
   transform: translateY(-150px);
   animation: icons-appearing 610ms 1830ms both;
@@ -353,7 +353,7 @@ body {
 }
 @media (min-width: 1024px) {
   .fonctionnement {
-    width: 96%;
+    width: 94%;
     height: 228px;
     display: flex;
     flex-direction: column;
@@ -370,6 +370,13 @@ body {
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
+}
+@media (min-width: 1024px) {
+  .fonctionnement__title-fonctionnement {
+    margin-left: 8%;
+    margin-top: 48px;
+    margin-right: 80px;
+  }
 }
 .fonctionnement__card-container {
   display: flex;
@@ -402,7 +409,7 @@ body {
 }
 @media (min-width: 1024px) {
   .fonctionnement__card {
-    width: 32%;
+    width: 25%;
     height: 72px;
     display: flex;
     flex-direction: row;
@@ -449,12 +456,8 @@ body {
 }
 @media (min-width: 1024px) {
   .restaurant {
-    display: flex;
     padding: 0px 180px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 28px;
-    align-self: stretch;
+    padding-bottom: 30px;
   }
 }
 .restaurant__title {
@@ -464,6 +467,15 @@ body {
 .restaurant__bloc {
   width: 90%;
   margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+@media (min-width: 1024px) {
+  .restaurant__bloc {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
 }
 
 .restaurant__cards {
@@ -471,10 +483,13 @@ body {
   flex-direction: column;
   position: relative;
   height: 251px;
-  margin: auto;
-  margin-bottom: 18px;
   border-radius: 15px;
   background-color: white;
+}
+@media (min-width: 1024px) {
+  .restaurant__cards {
+    height: 251px;
+  }
 }
 .restaurant__cards:hover {
   box-shadow: 0 4px 10px 0 #bcbcbc;
@@ -583,6 +598,16 @@ a {
   height: 186px;
   padding: 22px 25px 22px 25px;
 }
+@media (min-width: 1024px) {
+  .footer {
+    flex-direction: row-reverse !important;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: #353535;
+    height: 114px !important;
+    padding: 22px 25px 22px 25px;
+  }
+}
 .footer__text1 {
   display: flex;
   flex-direction: row;
@@ -650,6 +675,11 @@ a {
   position: relative;
   width: 100%;
 }
+@media (min-width: 1024px) {
+  .image img {
+    height: 450px;
+  }
+}
 
 .container {
   display: flex;
@@ -662,15 +692,31 @@ a {
   margin-top: -30px;
   height: 1159px;
 }
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    margin: auto;
+    margin-top: -30px;
+  }
+}
 
 .title {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 48px;
 }
 .title__police {
   font-size: 27px;
   font-family: "Shrikhand";
+}
+@media (min-width: 1024px) {
+  .title__police {
+    font-family: "Shrikhand";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+  }
 }
 .title__button {
   width: 28px;
@@ -721,7 +767,7 @@ a {
   flex: 1;
   justify-content: space-between;
   width: 100%;
-  margin: 2%;
+  margin: 1%;
   gap: 2%;
   white-space: nowrap;
   overflow: hidden;

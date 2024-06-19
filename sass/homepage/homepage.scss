@@ -96,7 +96,7 @@ body {
   display: flex;
   flex-direction: column;
   @include desktop {
-    width: 96%;
+    width: 94%;
     height: 228px;
     display: flex;
     flex-direction: column;
@@ -113,6 +113,11 @@ body {
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
+    @include desktop {
+      margin-left: 8%;
+      margin-top: 48px;
+      margin-right: 80px;
+    }
   }
   &__card-container {
     display: flex;
@@ -142,7 +147,7 @@ body {
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
     justify-content: space-evenly;
     @include desktop {
-      width: 32%;
+      width: 25%;
       height: 72px;
       display: flex;
       flex-direction: row;
@@ -187,13 +192,10 @@ body {
   margin: auto;
   padding: 20px 0 66px 0;
   background-color: $LightGray;
+
   @include desktop {
-    display: flex;
     padding: 0px 180px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 28px;
-    align-self: stretch;
+    padding-bottom: 30px;
   }
 
   &__title {
@@ -204,6 +206,14 @@ body {
   &__bloc {
     width: 90%;
     margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
   }
 }
 
@@ -212,10 +222,11 @@ body {
   flex-direction: column;
   position: relative;
   height: 251px;
-  margin: auto;
-  margin-bottom: 18px;
   border-radius: 15px;
   background-color: white;
+  @include desktop {
+    height: 251px;
+  }
 
   &:hover {
     @include object-shadow(darken($shadow, 10%));
@@ -338,6 +349,14 @@ a {
   height: 186px;
 
   padding: 22px 25px 22px 25px;
+  @include desktop {
+    flex-direction: row-reverse !important;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: #353535;
+    height: 114px !important;
+    padding: 22px 25px 22px 25px;
+  }
   &__text1 {
     display: flex;
     flex-direction: row;
