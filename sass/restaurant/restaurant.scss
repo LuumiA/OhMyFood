@@ -7,13 +7,23 @@
   justify-content: center;
   align-items: center;
   width: auto;
+  @include desktop {
+    display: flex;
+    justify-content: flex-start;
+    gap: 37%;
+  }
 }
 
 .icons {
   display: flex;
+  position: absolute;
+  @include desktop {
+    justify-content: flex-start;
+  }
   &__details {
     color: #353535;
     font-size: 30px;
+    margin-top: -15px;
   }
 }
 

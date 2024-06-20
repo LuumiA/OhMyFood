@@ -106,3 +106,69 @@
     animation-timing-function: linear;
   }
 }
+
+.entrees {
+  &:nth-child(1) {
+    .entrees-card {
+      animation: appearEntrance 1.5s ease forwards;
+      opacity: 0;
+    }
+  }
+}
+// APPARITION DES PLATS
+
+.plats {
+  &:nth-child(2) {
+    .entrees-card {
+      animation: appearPlat 5.5s ease forwards;
+      opacity: 0;
+    }
+  }
+}
+
+// APPARITION DES DESSERTS
+
+.desserts {
+  &:nth-child(3) {
+    .entrees-card {
+      animation: appearDessert 9.5s ease forwards;
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes appearEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Animation pour les éléments de plat
+
+@keyframes appearPlat {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Animation pour les éléments de dessert
+@keyframes appearDessert {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
