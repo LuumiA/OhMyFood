@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --main-color: #9356dc;
   --secondary-color: #ff79da;
@@ -94,19 +95,25 @@
     animation-timing-function: linear;
   }
 }
-.entrees:nth-child(1) .entrees-card {
+/* Applique une opacité initiale de 0 à toutes les cartes pour permettre l'animation */
+.entrees-card {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Animation pour les cartes d'entrées */
+.entrees ~ .entrees-card {
   animation: appearEntrance 1.5s ease forwards;
-  opacity: 0;
 }
 
-.plats:nth-child(2) .entrees-card {
+/* Animation pour les cartes de plats */
+.plats ~ .entrees-card {
   animation: appearPlat 5.5s ease forwards;
-  opacity: 0;
 }
 
-.desserts:nth-child(3) .entrees-card {
+/* Animation pour les cartes de desserts */
+.desserts ~ .entrees-card {
   animation: appearDessert 9.5s ease forwards;
-  opacity: 0;
 }
 
 @keyframes appearEntrance {
@@ -509,6 +516,10 @@ body {
 .restaurant__title {
   width: 90%;
   margin: 20px auto;
+  font-family: "Roboto";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
 }
 .restaurant__bloc {
   width: 90%;

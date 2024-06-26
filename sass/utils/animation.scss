@@ -107,34 +107,25 @@
   }
 }
 
-.entrees {
-  &:nth-child(1) {
-    .entrees-card {
-      animation: appearEntrance 1.5s ease forwards;
-      opacity: 0;
-    }
-  }
-}
-// APPARITION DES PLATS
-
-.plats {
-  &:nth-child(2) {
-    .entrees-card {
-      animation: appearPlat 5.5s ease forwards;
-      opacity: 0;
-    }
-  }
+/* Applique une opacité initiale de 0 à toutes les cartes pour permettre l'animation */
+.entrees-card {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 
-// APPARITION DES DESSERTS
+/* Animation pour les cartes d'entrées */
+.entrees ~ .entrees-card {
+  animation: appearEntrance 1.5s ease forwards;
+}
 
-.desserts {
-  &:nth-child(3) {
-    .entrees-card {
-      animation: appearDessert 9.5s ease forwards;
-      opacity: 0;
-    }
-  }
+/* Animation pour les cartes de plats */
+.plats ~ .entrees-card {
+  animation: appearPlat 5.5s ease forwards;
+}
+
+/* Animation pour les cartes de desserts */
+.desserts ~ .entrees-card {
+  animation: appearDessert 9.5s ease forwards;
 }
 
 @keyframes appearEntrance {
@@ -148,8 +139,6 @@
   }
 }
 
-// Animation pour les éléments de plat
-
 @keyframes appearPlat {
   0% {
     opacity: 0;
@@ -161,7 +150,6 @@
   }
 }
 
-// Animation pour les éléments de dessert
 @keyframes appearDessert {
   0% {
     opacity: 0;
